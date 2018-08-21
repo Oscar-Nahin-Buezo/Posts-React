@@ -10,11 +10,19 @@ class Note extends Component{
         this.title = props.title;
         this.votos = props.votos;
         this.noteId = props.noteId; 
+      
         this.handleRemoveNote = this.handleRemoveNote.bind(this);
+        this.handleAddLike = this.handleAddLike.bind(this);
     }
-
+   
     handleRemoveNote(id){
         this.props.removeNote(id);
+    }
+
+    handleAddLike(id){
+        var Votos = this.votos +1;
+        
+        this.props.addLike(id, Votos);
     }
 
     render(){
@@ -29,7 +37,8 @@ class Note extends Component{
                     <div id="cuerpo"className="postContenido" > Mensaje: { this.noteContent }</div>
                 
                     <div id="pie" className="postVotos">Likes: {this.votos}</div>
-                    <div id="boton"><button>Like</button></div>
+                    <div id="boton"><button onClick={() => this.handleAddLike(this.noteId)}>Like
+                    </button></div>
                 </div>
                
                 
@@ -39,7 +48,9 @@ class Note extends Component{
 }
 
 Note.propTypes = {
-    noteContent: PropTypes.string
+    title: PropTypes.string,
+    noteContent: PropTypes.string,
+    votos: PropTypes.number
 }
 
 export default Note;

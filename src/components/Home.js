@@ -10,6 +10,7 @@ export default class Home extends Component {
     super(props);
     this.addNote = this.addNote.bind(this);
     this.removeNote = this.removeNote.bind(this);
+    this.addLike=this.addLike.bind(this);
 
     this.app = base;
     this.database = this.app.database().ref().child('Post');
@@ -54,6 +55,12 @@ export default class Home extends Component {
     this.database.push().set({ Title:titulo,Mensaje: note,Votos: votos});
   }
 
+  addLike(noteId, Votos){
+    this.database.child(noteId).update({Votos:Votos});
+    window.location.reload()
+  }
+  
+
   removeNote(noteId){
     console.log("from the parent: " + noteId);
     this.database.child(noteId).remove();
@@ -74,7 +81,8 @@ export default class Home extends Component {
                 votos={note.votos}
                 noteId={note.id} 
                 key={note.id} 
-                removeNote ={this.removeNote}/>
+                removeNote ={this.removeNote}
+                addLike={this.addLike}/>
               )
             })
           }
