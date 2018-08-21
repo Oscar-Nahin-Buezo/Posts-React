@@ -56,24 +56,6 @@ class Dashboard extends Component {
     );
   }
 
-  
-  /*
-  <Card>
-            
-            <CardTitle title="Card title" subtitle="Card subtitle" />
-            <CardText>
-              <TextField
-                id = "data"
-                hintText="Hint Text"
-                floatingLabelText="Floating Label Text"
-              />
-            </CardText>
-            <CardActions>
-              <RaisedButton label="Action1" />
-              <RaisedButton label="Action2" primary={true} onClick={() => { this.prueba(); }}/>
-            </CardActions>
-          </Card>
-  */
 }
 
 Dashboard.propTypes = {
