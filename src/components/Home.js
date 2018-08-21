@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Note from './Note/Note';
 import NoteForm from './NoteForm/NoteForm';
- //{ DB_CONFIG } from '../config/config.js';
 import { base } from '../config/constants.js';
 import firebase from 'firebase/app';
 import 'firebase/database';
