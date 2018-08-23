@@ -5,6 +5,7 @@ import { base } from '../config/constants.js';
 import firebase from 'firebase/app';
 import 'firebase/database';
 
+
 export default class Home extends Component {
   constructor(props){
     super(props);
@@ -18,6 +19,7 @@ export default class Home extends Component {
     // We're going to setup the React state of our component
     this.state = {
       notes: [],
+      comenta: {name:"", Contenido:""},
     };
   }
 
@@ -26,15 +28,21 @@ export default class Home extends Component {
 
     // DataSnapshot
     this.database.on('child_added', snap => {
+      
+      this.setState({comenta: {name:snap.val().Comentario.Usuario, 
+        Contenido :snap.val().Comentario.Contenido}});
+      console.log(this.state.comenta);
       previousNotes.push({
         id: snap.key,
         title: snap.val().Title,
         newNoteContent: snap.val().Mensaje,
         votos: snap.val().Votos,
+        comentario: this.state.comenta,
       })
 
       this.setState({
-        notes: previousNotes
+        notes: previousNotes,
+       
       })
     })
 
@@ -67,18 +75,23 @@ export default class Home extends Component {
   }
 
   render() {
+    
     return (
-      <div className="notesWrapper">
+  
+      <div id =" contener"className="notesWrapper">
         <div className="notesHeader">
           <div className="heading">POSTS</div>
         </div>
-        <div className="notesBody">
+        <div id="cuerpo" className="notesBody">
           {
             this.state.notes.map((note) => {
               return (
+                
                 <Note noteContent={note.newNoteContent} 
                 title= {note.title}
                 votos={note.votos}
+                comentario={note.comentario.Contenido}
+                nombreComentario={note.comentario.name}
                 noteId={note.id} 
                 key={note.id} 
                 removeNote ={this.removeNote}

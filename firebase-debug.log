@@ -1,0 +1,96 @@
+[debug] [2018-08-23T03:47:43.765Z] ----------------------------------------------------------------------
+[debug] [2018-08-23T03:47:43.769Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase init
+[debug] [2018-08-23T03:47:43.769Z] CLI Version:   4.1.2
+[debug] [2018-08-23T03:47:43.769Z] Platform:      win32
+[debug] [2018-08-23T03:47:43.769Z] Node Version:  v8.11.3
+[debug] [2018-08-23T03:47:43.769Z] Time:          Wed Aug 22 2018 21:47:43 GMT-0600 (Hora estándar, América Central)
+[debug] [2018-08-23T03:47:43.769Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-23T03:47:43.781Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] [2018-08-23T03:47:43.782Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Dell\Desktop\material-ui
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2018-08-23T03:48:23.247Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-08-23T03:48:23.248Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-08-23T03:48:24.652Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-23T03:48:24.771Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects  
+ 
+[debug] [2018-08-23T03:48:28.327Z] <<< HTTP RESPONSE 200
+[info] 
+=== Database Setup
+[info] 
+[info] Firebase Realtime Database Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2018-08-23T03:48:44.503Z] >>> HTTP REQUEST GET https://mypost-6b27e.firebaseio.com/.settings/rules.json  
+ 
+[debug] [2018-08-23T03:48:46.156Z] <<< HTTP RESPONSE 200
+[info] +  Database Rules for mypost-6b27e have been downloaded to database.rules.json.
+[info] Future modifications to database.rules.json will update Database Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2018-08-23T03:48:46.196Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-23T03:48:46.197Z] > authorizing via signed-in user
+[debug] [2018-08-23T03:48:46.197Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-08-23T03:48:46.198Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+
+[debug] [2018-08-23T03:48:48.075Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-23T03:48:48.306Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mypost-6b27e  
+ 
+[debug] [2018-08-23T03:48:49.311Z] <<< HTTP RESPONSE 200
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2018-08-23T03:48:56.216Z] >>> HTTP REQUEST GET https://firebaserules.googleapis.com/v1/projects/mypost-6b27e/releases  
+ 
+[debug] [2018-08-23T03:48:57.295Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-23T03:48:57.296Z] No rulesets found, using default.
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2018-08-23T03:49:03.409Z] >>> HTTP REQUEST GET https://firestore.googleapis.com/v1beta1/projects/mypost-6b27e/databases/(default)/indexes  
+ 
+[debug] [2018-08-23T03:49:05.384Z] <<< HTTP RESPONSE 400
+[debug] [2018-08-23T03:49:05.384Z] <<< HTTP RESPONSE BODY
+[info] 
+=== Functions Setup
+[info] 
+[info] A functions directory will be created in your project with a Node.js
+[info] package pre-configured. Functions can be deployed with firebase deploy.
+[info] 
+[debug] [2018-08-23T03:49:05.406Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-23T03:49:05.408Z] > authorizing via signed-in user
+[debug] [2018-08-23T03:49:05.411Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/mypost-6b27e  
+ 
+[debug] [2018-08-23T03:49:06.317Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-23T03:49:06.320Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/mypost-6b27e?updateMask=usageSettings  
+
+[debug] [2018-08-23T03:49:06.321Z] >>> HTTP REQUEST PATCH https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/mypost-6b27e?updateMask=usageSettings  
+
+[debug] [2018-08-23T03:49:08.867Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-23T03:49:09.191Z] <<< HTTP RESPONSE 200
+[info] +  Wrote functions/package.json
+[info] +  Wrote functions/index.js
